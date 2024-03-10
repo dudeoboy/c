@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" type="text/css" href="style.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Christine Lee - Cats</title>
@@ -57,11 +58,20 @@
   }
   /* Add classes for cat images and other elements as needed */
 </style>
-</head>
-<body>
 
 <div class="navbar">
   <ul>
+  <div class="menu-icon" onclick="toggleMenu()">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+  <div class="menu-content" id="menuContent">
+    <a href="test.html">1.1.2024 - Santa Cruz</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
     <li><a href="#">^• - •^</a></li>
     <!-- Add more navigation items here -->
   </ul>
@@ -69,6 +79,10 @@
     <li><a href="#">^• - •^</a></li>
   </ul>
 </div>
+
+<script src="script.js"></script>
+</head>
+<body>
 
 <div class="welcome-section">
   <h1>Hello And Welcome!</h1>
