@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcomic Title</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f5f5f5; /* Light grey background color */
+            background-image: url('cute-background.jpg'); /* Replace with your cute background image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Decorative fillers on the sides of the webpage */
+        .filler-left {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 20%;
+            height: 100%;
+            background-color: white; /* Cute pink color */
+        }
+
+        .filler-right {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 20%;
+            height: 100%;
+            background-color: white; /* Cute blue color */
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            z-index: 1; /* Ensure content is displayed above the fillers */
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #FF69B4; /* Cute pink color */
+        }
+
+        .comic-panel {
+            display: block;
+            margin: 10px auto; /* Reduced margin for a tighter fit */
+            text-align: center;
+            background-color: pink; /* White background for comic panels */
+            padding: 5px; /* Reduced padding for less whitespace */
+            border-radius: 10px; /* Rounded corners for panels */
+            z-index: 1;
+        }
+
+        .comic-image {
+            max-width: calc(100% - 10px); /* Subtract the padding width from the max-width */
+            border: 2px solid #FF69B4; /* Border applied directly to the image */
+            border-radius: 5px; /* Rounded corners for the image border */
+        }
+
+        .comic-navigation {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .comic-navigation a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #FFF;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+    
+        .cat-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fee3e2;
+            padding: 0px;
+        }
+
+        #slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+    
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #ffffff;
+  }
+  .navbar ul {
+    list-style: none;
+    display: flex;
+  }
+  .navbar ul li {
+    padding: 0 15px;
+  }
+  .navbar a {
+    text-decoration: none;
+    color: #333;
+  }
+* {
+    box-sizing: border-box;
+}
+    </style>
+</head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+<body>
+    <div class="navbar">
+        <li><a href="index.html">^• - •^</a></li>
+        <!-- Add more navigation items here -->
+      </ul>
+      <ul>
+        <li><a href="index.html">^• - •^</a></li>
+      </ul>
+    </div>
+    <div class="cat-row">
+        <img src="photos/catbar1.png">
+    </div>
+
+    <div id="slideshow-container">
+        <div class="mySlides">
+            <img src="photos/comic/page0.png" alt="Slide 1">
+            <div class="caption">Caption for Slide 1</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="photos/comic/page1.png" alt="Slide 2">
+            <div class="caption">Caption for Slide 2</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="photos/comic/page2.png" alt="Slide 3">
+            <div class="caption">Caption for Slide 3</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="photos/comic/page3.png" alt="Slide 1">
+            <div class="caption">Caption for Slide 1</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="photos/comic/page4.png" alt="Slide 2">
+            <div class="caption">Caption for Slide 2</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="photos/comic/page5.png" alt="Slide 3">
+            <div class="caption">Caption for Slide 3</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="photos/comic/page6.png" alt="Slide 1">
+            <div class="caption">Caption for Slide 1</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="photos/comic/page7.png" alt="Slide 2">
+            <div class="caption">Caption for Slide 2</div>
+        </div>
+
+        <!-- Add more slides as needed -->
+
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        // Handle clicking on the left or right half of the image
+        document.getElementById("slideshow-container").addEventListener("click", function(event) {
+            const width = this.offsetWidth;
+            const x = event.clientX - this.getBoundingClientRect().left;
+
+            if (x < width / 2) {
+                plusSlides(-1); // Clicked on the left half
+            } else {
+                plusSlides(1); // Clicked on the right half
+            }
+        });
+    </script>
+
+</body>
+</html>
