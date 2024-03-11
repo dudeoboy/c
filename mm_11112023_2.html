@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+function fn1() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
+
+<style>
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #ffffff;
+  }
+  .navbar ul {
+    list-style: none;
+    display: flex;
+  }
+  .navbar ul li {
+    padding: 0 15px;
+  }
+  .navbar a {
+    text-decoration: none;
+    color: #333;
+  }
+* {
+    box-sizing: border-box;
+}
+body {
+  	font-family: 'Lato', sans-serif;
+  	font-weight: 400;
+  	font-size: 16px;
+  	line-height: 1.7;
+  	color: #eee;
+}
+footer {
+  background-color: #33C1FF;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+.header {
+  	height: 100vh;
+  	background-image: 
+	  linear-gradient(to left bottom, 
+     rgba(76, 216, 255, 0.8),
+     rgba(30, 108, 217, 0.8)),
+     url('images/koi.jpg');
+  	
+	background-size: cover;
+        background-repeat: no-repeat;
+  	background-position: top;
+  	position: relative;
+
+  	clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 100%);
+        margin: 10;
+}
+
+.brand-box {
+  	position: absolute;
+  	top: 40px;
+  	left: 40px;
+}
+
+.brand { font-size: 20px; }
+
+.text-box {
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	text-align: center;
+}
+
+.heading-primary {
+  	color: #fff;
+  	text-transform: uppercase;
+
+  	backface-visibility: hidden;
+  	margin-bottom: 30px;
+}
+
+.heading-primary-main {
+  	display: block;
+  	font-size: 26px;
+  	font-weight: 400;
+  	letter-spacing: 5px;
+}
+
+.heading-primary-sub {
+  	display: block;
+  	font-size: 18px;
+  	font-weight: 700;
+  	letter-spacing: 7.4px;
+}
+
+.btn:visited {
+  	text-transform: uppercase;
+  	text-decoration: none;
+  	padding: 10px 20px;
+  	display: inline-block;
+  	border-radius: 100px;
+  	transition: all .2s;
+  	position: relative;
+}
+
+.btn:hover {
+  	transform: translateY(-3px);
+  	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  	transform: translateY(-1px);
+  	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  	background-color: #fff;
+  	color: #777;
+	font-size: 14px;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    max-length: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
+}
+
+.column img:hover{
+  opacity: 1;
+  transition: 0.3s;
+}
+.button {
+  background-color: #33C1FF; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px 4px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+}
+.button1 {
+background-color: #33C1FF; /* Green */
+border: none;
+color: white;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 20px 4px;
+cursor: pointer;
+border-radius: 8px;
+transition-duration: 0.4s;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.button:hover {
+  box-shadow: 0 12px 22px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #33C1FF;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+</style>
+<div class="navbar">
+    <li><a href="index.html">^• - •^</a></li>
+    <!-- Add more navigation items here -->
+  </ul>
+  <ul>
+    <li><a href="index.html">^• - •^</a></li>
+  </ul>
+</div>
+
+<div align="center">
+  <a href="mm_11112023.html" class="button1">1</a>
+  <a href="mm_11112023_2.html" class="button">2</a>
+  <a href="mm_11112023_3.html" class="button">3</a>
+  <a href="mm_11112023_4.html" class="button">4</a>
+  <a href="mm_11112023_5.html" class="button">5</a>
+</div>
+	
+<div class="row">
+<div class="column">
+    <div class="container">
+      <img src="photos/mentor_mentee_11112023/IMG_5912.JPEG" alt="Avatar" class="image" style="width:100%;length:25%;">
+      <div class="middle">
+        <div class="text">^^;;</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="photos/mentor_mentee_11112023/IMG_5913.JPEG" alt="Avatar" class="image" style="width:100% length:25%">
+      <div class="middle">
+        <div class="text">:-D</div>
+      </div>
+    </div>
+</div>
+
+<div class="column">
+    <div class="container">
+      <img src="photos/mentor_mentee_11112023/IMG_5915.JPEG" alt="Avatar" class="image" style="width:100%;length:25%;">
+      <div class="middle">
+        <div class="text">^^;;</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="photos/mentor_mentee_11112023/IMG_5916.JPEG" alt="Avatar" class="image" style="width:100% length:25%">
+      <div class="middle">
+        <div class="text">:-D</div>
+      </div>
+    </div>
+</div>
+
+<div class="column">
+    <div class="container">
+      <img src="photos/mentor_mentee_11112023/IMG_5917.JPEG" alt="Avatar" class="image" style="width:100%;length:25%;">
+      <div class="middle">
+        <div class="text">^^;;</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="photos/mentor_mentee_11112023/IMG_5918.JPEG" alt="Avatar" class="image" style="width:100% length:25%">
+      <div class="middle">
+        <div class="text">:-D</div>
+      </div>
+    </div>
+</div>
+
+<div class="column">
+    <div class="container">
+      <img src="photos/mentor_mentee_11112023/IMG_5919.JPEG" alt="Avatar" class="image" style="width:100%;length:25%;">
+      <div class="middle">
+        <div class="text">^^;;</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="photos/mentor_mentee_11112023/IMG_5920.JPEG" alt="Avatar" class="image" style="width:100%;length:25%;">
+      <div class="middle">
+        <div class="text">^^;;</div>
+      </div>
+    </div>
+</div>
+</div>
+<div align="center">
+  <a href="mm_11112023.html" class="button1">1</a>
+  <a href="mm_11112023_2.html" class="button">2</a>
+  <a href="mm_11112023_3.html" class="button">3</a>
+  <a href="mm_11112023_4.html" class="button">4</a>
+  <a href="mm_11112023_5.html" class="button">5</a>
+</div>
