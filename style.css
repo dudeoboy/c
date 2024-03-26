@@ -2,8 +2,6 @@
 .menu-icon {
   cursor: pointer;
   display: inline-block;
-  z-index: 1;
-  position: relative;
 }
 
 /* Style each bar of the hamburger icon */
@@ -41,8 +39,7 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
   z-index: 1;
-  position: relative;
-  text-wrap: nowrap;
+  position: absolute;
 }
 
 .menu-content a {
