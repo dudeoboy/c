@@ -3,6 +3,7 @@
   cursor: pointer;
   display: inline-block;
   z-index: 1;
+  position: relative;
 }
 
 /* Style each bar of the hamburger icon */
