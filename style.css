@@ -2,6 +2,7 @@
 .menu-icon {
   cursor: pointer;
   display: inline-block;
+  z-index: 1;
 }
 
 /* Style each bar of the hamburger icon */
